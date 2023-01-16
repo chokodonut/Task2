@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="application.css">
+    <title>WedCampTask2</title>
+    
+    <body>
+  <h1>Editing Book</h1>
+   <%= form_with model: Edit.new do |f| %>
+   <%= f.text_field :title %>
+   <%= f.text_area :body %>
+   <%= f.submit 'Update Book' %>
+  <% end %>
+</body>
