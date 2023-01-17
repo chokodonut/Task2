@@ -7,7 +7,7 @@
     
     <body>
   <h1>Editing Book</h1>
-   <%= form_with model: Edit.new do |f| %>
+   <%= form_with model: Book.new do |f| %>
    <%= f.text_field :title %>
    <%= f.text_area :body %>
    <%= f.submit 'Update Book' %>
