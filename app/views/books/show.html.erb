@@ -6,10 +6,13 @@
     <title>WedCampTask2</title>
     
     <body>
-  <h1>Editing Book</h1>
-   <%= form_with model: Book.new do |f| %>
-   <%= f.text_field :title %>
-   <%= f.text_area :body %>
-   <%= f.submit 'Update Book' %>
-  <% end %>
-</body>
+        
+        <p><%=@book.title %></p>
+        <p><%=@book.body %></p>
+<!--  <h1>Editing Book</h1>-->
+<!--   <%= form_with model: Book.new do |f| %>-->
+<!--   <%= f.text_field :title %>-->
+<!--   <%= f.text_area :body %>-->
+<!--   <%= f.submit 'Update Book' %>-->
+<!--  <% end %>-->
+<!--</body>-->
