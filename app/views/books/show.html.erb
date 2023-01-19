@@ -7,12 +7,16 @@
     
     <body>
         
-        <p><%=@book.title %></p>
-        <p><%=@book.body %></p>
-<!--  <h1>Editing Book</h1>-->
-<!--   <%= form_with model: Book.new do |f| %>-->
-<!--   <%= f.text_field :title %>-->
-<!--   <%= f.text_area :body %>-->
-<!--   <%= f.submit 'Update Book' %>-->
-<!--  <% end %>-->
-<!--</body>-->
+        <p><strong>Title:</strong>
+          <%=@book.title %>
+        </p>
+        
+        <p><strong>Body:</strong>
+          <%=@book.body %>
+       
+        </p>
+        
+        <%= link_to"Edit",edit_book_path(@book.id) %>
+        |
+        <%= link_to"Back",books_path %>
+</body>

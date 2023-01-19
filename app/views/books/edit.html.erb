@@ -2,21 +2,30 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="books.scss">
+    <link rel="stylesheet" href="application.css">
     <title>WedCampTask2</title>
 <body>
     
   <h1>Editing Book</h1>
-   <%= form_with model: @book,url: edit_book_path(@book.id), method: :patch do |f| %>
+   <%= form_with model: @book,url: book_path(@book.id), method: :patch do |f| %>
    
-   <%= f.text_field :title %>
-   <%= f.text_area :body %>
+   <div class="title">
+     <label>Title</label>  
+       <%= f.text_field :title %>
+   </div>
    
+   <div class="body">
+     <label>Body</label>  
+       <%= f.text_area :body %>
+   </div>
+   
+   <div class="actions">
    <%= f.submit 'Update Book' %>
-   <!--<%= link_to book_path(@book.id) %>-->
+    </div>
    
-   <a class="show" href="/book">Show</a>
-   <a class="back" href="books">Back</a>
+   <%= link_to"Show",book_path(@book.id) %>
+   |
+   <%= link_to"Back",books_path %>
   <% end %>
  </body>
  
